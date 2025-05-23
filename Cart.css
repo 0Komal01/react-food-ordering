@@ -1,0 +1,183 @@
+/* =============================
+   MAIN CONTAINER
+============================= */
+.cart-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.cart-container h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #333;
+}
+
+/* =============================
+   EMPTY CART TEXT
+============================= */
+.cart-empty {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #777;
+}
+
+/* =============================
+   CART ITEMS
+============================= */
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* =============================
+   SINGLE ITEM CARD
+============================= */
+.cart-item {
+  display: flex;
+  gap: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 16px;
+  align-items: center;
+  border: 1px solid #ddd;
+}
+
+/* =============================
+   PRODUCT IMAGE
+============================= */
+.cart-item-img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* =============================
+   DETAILS
+============================= */
+.cart-item-details {
+  flex: 1;
+}
+
+.cart-item-details h3 {
+  font-size: 1.4rem;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.cart-item-details p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* =============================
+   QUANTITY CONTROLS
+============================= */
+.qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0;
+}
+
+.qty-controls button {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.qty-controls button:hover {
+  background-color: #ddd;
+}
+
+.qty-controls span {
+  font-weight: bold;
+  font-size: 1.1rem;
+  min-width: 24px;
+  text-align: center;
+}
+
+/* =============================
+   REMOVE BUTTON
+============================= */
+.remove-btn {
+  background-color: #ff4d4f;
+  color: white;
+  padding: 6px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.remove-btn:hover {
+  background-color: #d9363e;
+}
+
+/* =============================
+   TOTAL & ORDER
+============================= */
+.cart-summary {
+  margin-top: 30px;
+  text-align: right;
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+}
+
+.cart-summary h3 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.place-order-btn {
+  background: linear-gradient(to right, #00b894, #00cec9);
+  color: #fff;
+  padding: 10px 28px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.place-order-btn:hover {
+  background: linear-gradient(to right, #00cec9, #00b894);
+  transform: translateY(-2px);
+}
+
+/* =============================
+   RESPONSIVE
+============================= */
+@media (max-width: 768px) {
+  .cart-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cart-item-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .cart-summary {
+    text-align: center;
+  }
+
+  .place-order-btn {
+    width: 100%;
+  }
+}

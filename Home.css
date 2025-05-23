@@ -1,0 +1,361 @@
+/* Home Container */
+.home-container {
+  padding: 2rem;
+  background: #fffaf4;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Welcome Banner */
+.welcome-banner {
+  text-align: center;
+  margin: 2rem 0;
+  padding: 2rem;
+  background: linear-gradient(90deg, #ffd8a6, #ffe7c7);
+  border-radius: 16px;
+  color: #222;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-banner h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.welcome-banner p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  color: #444;
+}
+
+/* Menu Header */
+.menu-header {
+  text-align: center;
+  margin: 3rem 0 2rem;
+  position: relative;
+}
+
+.menu-header h2 {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: 700;
+  display: inline-block;
+  background-color: #fffaf4;
+  padding: 0 1rem;
+  z-index: 1;
+  position: relative;
+}
+
+.menu-header::before,
+.menu-header::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 2px;
+  background-color: #ffa751;
+}
+
+.menu-header::before {
+  left: 0;
+}
+
+.menu-header::after {
+  right: 0;
+}
+
+/* Filter/Search Section */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.search-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+}
+
+.search-input {
+  padding: 0.6rem 1rem;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.filter-select {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: white;
+  font-size: 1rem;
+}
+
+/* Container to center and stack input + dropdown */
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  max-width: 600px;
+  margin: 2rem auto;
+  width: 100%;
+}
+
+/* Search input styling */
+.search-input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid orange;
+  border-radius: 12px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* Dropdown suggestions */
+.suggestions-list {
+  width: 100%;
+  background: white;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: -1px;
+  max-height: 250px;
+  overflow-y: auto;
+  z-index: 10;
+  padding: 0;
+  list-style: none;
+  animation: fadeIn 0.2s ease-in-out;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+/* Suggestion item */
+.suggestion-item {
+  padding: 12px 16px;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background 0.2s ease;
+}
+
+.suggestion-item:hover {
+  background-color: #fff3e0;
+}
+
+/* Animation for dropdown */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: #333;
+  border-left: 6px solid #ffa751;
+  padding-left: 1rem;
+  font-weight: 600;
+}
+
+/* Grid Layout */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+@media (max-width: 992px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .welcome-banner h1 {
+    font-size: 2.2rem;
+  }
+}
+
+/* Menu Card */
+.menu-card {
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(255, 165, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #fff0e5;
+}
+
+.menu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 35px rgba(255, 165, 0, 0.25);
+}
+
+/* Card Image */
+.menu-image {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 4px solid #ffa751;
+  transition: transform 0.3s ease;
+}
+
+.menu-card:hover .menu-image {
+  transform: scale(1.03);
+}
+
+/* Card Body */
+.menu-card-body {
+  padding: 1.5rem;
+}
+
+.menu-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.menu-description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+  min-height: 50px;
+}
+
+.menu-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Price */
+.menu-price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ffa751;
+}
+
+/* Add to Cart Button */
+.add-to-cart {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-to-cart:hover {
+  background-color: #388e3c;
+  transform: scale(1.05);
+}
+
+/* Show More / Show Less Buttons */
+.show-more-container {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.show-more-btn {
+  background-color: #b320e0;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.show-more-btn:hover {
+  background-color: #e68900;
+  transform: scale(1.05);
+}
+
+.show-more-btn::after {
+  content: " 🔽";
+}
+
+.show-less-btn {
+  background-color: #b320e0;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.show-less-btn:hover {
+  transform: scale(1.05);
+}
+
+.show-less-btn::after {
+  content: " 🔼";
+}
+
+/* Divider Between Categories */
+.category-divider {
+  border: none;
+  height: 3px;
+  background: linear-gradient(to right, #dd862f, #d6be47);
+  margin: 3rem 0 2rem;
+  border-radius: 2px;
+}
+
+/* Floating Cart Icon */
+.floating-cart {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: red;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

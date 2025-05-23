@@ -1,0 +1,117 @@
+/* Reset spacing */
+body, html {
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  /* Gradient craving-style navbar     background: linear-gradient(90deg, #ff3c38, #ff8c42, #ffc857);
+ background: linear-gradient(90deg, #f9d423, #ff4e50);
+
+  */
+  .custom-navbar {
+ background: linear-gradient(90deg, #f9d423, #ff4e50);
+    padding: 0.8rem 1.2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-bottom: 4px solid #ffb347;
+  }
+  
+  /* Bigger logo */
+  .logo-img {
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  .logo-img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+  
+  /* Nav layout */
+  .navbar-collapse {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .navbar-nav {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Nav links - bigger text */
+  .nav-link {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.2rem; /* Increased font size */
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover,
+  .nav-link:focus {
+    color: #ffeedf;
+  }
+  
+  /* Cool underline effect */
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: #fff;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  /* Toggle button for mobile */
+  .navbar-toggler {
+    display: none;
+    background-color: transparent;
+    border: none;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-toggler {
+      display: block;
+    }
+  
+    .navbar-collapse {
+      display: none;
+      flex-direction: column;
+      background: linear-gradient(90deg, #ff4e50, #fc913a);
+      border-radius: 0 0 10px 10px;
+      padding: 1rem;
+    }
+  
+    .navbar-collapse.show {
+      display: flex;
+    }
+  
+    .navbar-nav {
+      flex-direction: column;
+      text-align: center;
+      gap: 1.2rem;
+    }
+  
+    .nav-link {
+      font-size: 1.3rem;
+    }
+  }
+
+  .navbar-nav li::marker {
+  display: none;
+}
+
+.navbar-nav li {
+  list-style: none !important;
+}
